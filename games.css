@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('assets/bk-3.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #1f1f1f;
+    overflow: hidden;
+}
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1f1f1f;
+    z-index: 9999;
+    user-select: none;
+}
+
+#loader.hide {
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#loader h1 {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 7vw;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#loader h1 span {
+    color: #91ff00;
+}
+
+#loader p {
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 1.2vw;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#loader .loader {
+    position: absolute;
+    top:63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6vw;
+    height:6vw;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    border-top-color: #91ff00;
+    animation: loader 1s linear infinite;
+    box-shadow: 0 0 10px #ffffff7a;
+}
+
+@keyframes loader {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.content {
+    position: relative;
+    width: 80%;
+    left: 10%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2vw;
+}
+
+.content h1 {
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 7vw;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#games {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top:26vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#games .item {
+    width: 12vw;
+    height: 12vw;
+    margin: 1vw;
+    display: flex;
+    border-radius: 1vw;
+    transition: all 0.5s;
+}
+
+#games .item .img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 1vw;
+}
+
+#games .item:hover {
+    cursor: pointer;
+    transform: rotate(-10deg) scale(1.3);
+    box-shadow: 0 0 1vw #181818;
+}
